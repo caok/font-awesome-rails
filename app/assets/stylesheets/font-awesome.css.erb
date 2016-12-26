@@ -11,8 +11,8 @@
 //= depend_on_asset "fontawesome-webfont.svg"
 @font-face {
   font-family: 'FontAwesome';
-  src: url('<%= font_url('fontawesome-webfont.eot') %>');
-  src: url('<%= font_url('fontawesome-webfont.eot') %>?#iefix') format('embedded-opentype'), url('<%= font_url('fontawesome-webfont.woff2') %>') format('woff2'), url('<%= font_url('fontawesome-webfont.woff') %>') format('woff'), url('<%= font_url('fontawesome-webfont.ttf') %>') format('truetype'), url('<%= font_url('fontawesome-webfont.svg') %>#fontawesomeregular') format('svg');
+  src: url('<%= ENV['CDN_HOST'] ? font_url('fontawesome-webfont.eot', host: ENV['CDN_HOST']) : font_path('fontawesome-webfont.eot') %>');
+  src: url('<%= ENV['CDN_HOST'] ? font_url('fontawesome-webfont.eot', host: ENV['CDN_HOST']) : font_path('fontawesome-webfont.eot') %>?#iefix') format('embedded-opentype'), url('<%= ENV['CDN_HOST'] ? font_url('fontawesome-webfont.woff2', host: ENV['CDN_HOST']) : font_path('fontawesome-webfont.woff2') %>') format('woff2'), url('<%= ENV['CDN_HOST'] ? font_url('fontawesome-webfont.woff', host: ENV['CDN_HOST']) : font_path('fontawesome-webfont.woff') %>') format('woff'), url('<%= ENV['CDN_HOST'] ? font_url('fontawesome-webfont.ttf', host: ENV['CDN_HOST']) : font_path('fontawesome-webfont.ttf') %>') format('truetype'), url('<%= ENV['CDN_HOST'] ? font_url('fontawesome-webfont.svg', host: ENV['CDN_HOST']) : font_path('fontawesome-webfont.svg') %>#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
